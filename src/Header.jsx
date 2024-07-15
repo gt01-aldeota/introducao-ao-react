@@ -1,6 +1,5 @@
-// src/components/Header.jsx
 import React from 'react';
-import './Header.css'; // Importando o CSS para o componente
+import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faSearch } from '@fortawesome/free-solid-svg-icons';
 
