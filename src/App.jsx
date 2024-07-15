@@ -1,8 +1,8 @@
-import Saudacao from "./Saudacao";
-import Despedida from "./Despedida";
-import Fetch from "./Fetch";
-import Carrossel from "./Carrossel";
-import Header from "./Header";
+import Saudacao from "./components/Saudacao";
+import Despedida from "./components/Despedida";
+import Fetch from "./components/Fetch";
+import Carrossel from "./components/Carrossel";
+import Header from "./components/Header";
 
 function App() {
   return (
