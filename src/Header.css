@@ -1,0 +1,127 @@
+/* src/components/Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #e91e63;
+    border: 1px solid #e91e63;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #d81b60;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e91e63;
+    border-bottom: 2px solid #e91e63;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.user-actions a:hover {
+    color: #e91e63;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #d81b60;
+}
+
+.cart-icon {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #e91e63;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e91e63;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+}

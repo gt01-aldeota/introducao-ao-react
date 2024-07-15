@@ -1,0 +1,7 @@
+.carousel .control-dots .dot {
+    background-color: #ccc;
+}
+
+.carousel .control-dots .dot.selected {
+    background-color: #C92071;
+}
