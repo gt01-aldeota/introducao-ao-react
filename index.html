@@ -6,8 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
   </head>
+  <script>
+    function chuchu() {
+      console.log('chuchu')
+    }
+    function chuchu2() {
+      console.log('chuchu2')
+    }
+    function chuchu3() {
+      console.log('chuchu3')
+    }
+    function chuchu4() {
+      console.log('chuchu4')
+    }
+  </script>
   <body>
+    <!-- <button type="button" onclick="chuchu()" onblur="chuchu2()">chuchu</button> -->
+    <!-- <input type="text" name="" id="" onkeyup="chuchu3()" onkeydown="chuchu4()"> -->
+    <button className="textoBuscar" onclick="var a = 10;console.log(a);function chuchuatomico(){console.log('chuchuatomico')} chuchuatomico()">Buscar</button>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
   </body>
 </html>

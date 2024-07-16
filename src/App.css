@@ -1,0 +1,36 @@
+.chuchu {
+    display: flex;
+    justify-content: space-between
+}
+
+.lateralEsquerda {
+    display: flex;
+    gap:20px
+}
+
+
+.lateralDireita {
+    display: flex;
+    gap:20px
+}
+
+.busca {
+    display: flex;
+    align-items: center;
+}
+
+.inputBuscar{
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px
+}
+.textoBuscar{
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px
+}
