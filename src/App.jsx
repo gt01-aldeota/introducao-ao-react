@@ -4,9 +4,12 @@ import Fetch from "./components/Fetch";
 import Carrossel from "./components/Carrossel";
 import Header from "./components/Header";
 import './App.css'
+import React from "react";
 
 
 function App() {
+
+  
 
   function funcaoExterna() {
     console.log('funcaoExterna')
@@ -19,13 +22,22 @@ function App() {
     console.log(inputValue);
   }
 
+  const [b, setB] = React.useState(0);
+  var a = 10
+
 
   return (
     <div>
+      <p>a: {a}</p>
+      <p>b: {b}</p>
+      <button className="bg-red-500" onClick={()=>{setB(20)}}>Mudar Valor de B</button>
       <div className="chuchu">
         <div className="lateralEsquerda">
           <div>Logo</div>
           <div>Digital College</div>
+          <h1 className="text-3xl font-bold underline">
+            Hello world!
+          </h1>
           <div className="busca">
             <input
               className="inputBuscar"
