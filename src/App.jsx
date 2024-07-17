@@ -81,7 +81,7 @@ function App() {
       {/* <Despedida /> */}
       {/* <Fetch /> */}
       <div className="relativo">
-        <div className="absoluta">2</div>
+        <div id="carrinho-quantidade" className="absoluta">0</div>
         <div className="carrinho">
         <ShoppingCart />
         </div>
