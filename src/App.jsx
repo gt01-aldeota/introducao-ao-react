@@ -4,13 +4,11 @@ import Fetch from "./components/Fetch";
 import Carrossel from "./components/Carrossel";
 import Header from "./components/Header";
 import './App.css'
-import React from "react";
-
+import React from 'react'
+import ProductCard from "./components/ProductCard";
+import ProductListing from "./components/ProductListing";
 
 function App() {
-
-  
-
   function funcaoExterna() {
     console.log('funcaoExterna')
     var a = 1
@@ -28,7 +26,9 @@ function App() {
 
   return (
     <div>
-      <p>a: {a}</p>
+      <p>chuchu</p>
+
+      {/* <p>a: {a}</p>
       <p>b: {b}</p>
       <button className="bg-red-500" onClick={()=>{setB(20)}}>Mudar Valor de B</button>
       <div className="chuchu">
@@ -74,13 +74,17 @@ function App() {
           <div>Carrinho</div>
         </div>
       </div>
-      <Header />
+      <Header /> */}
       {/* <Carrossel /> */}
       {/* <Saudacao /> */}
       {/* <Despedida /> */}
       {/* <Fetch /> */}
+      <p>chuchu2</p>
+      <ProductListing />
     </div>
   )
 }
 
 export default App;
+
+
