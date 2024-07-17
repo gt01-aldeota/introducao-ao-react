@@ -7,6 +7,8 @@ import './App.css'
 import React from 'react'
 import ProductCard from "./components/ProductCard";
 import ProductListing from "./components/ProductListing";
+import { ShoppingCart } from 'lucide-react';
+
 
 function App() {
   function funcaoExterna() {
@@ -26,7 +28,6 @@ function App() {
 
   return (
     <div>
-      <p>chuchu</p>
 
       {/* <p>a: {a}</p>
       <p>b: {b}</p>
@@ -79,6 +80,17 @@ function App() {
       {/* <Saudacao /> */}
       {/* <Despedida /> */}
       {/* <Fetch /> */}
+      <div className="relativo">
+        <div className="absoluta">2</div>
+        <div className="carrinho">
+        <ShoppingCart />
+        </div>
+
+      </div>
+      <div>
+        <p>Ei, eu tenho produto aqui, muito foda:</p>
+        <ProductCard nome="produto FODA" />
+      </div>
       <p>chuchu2</p>
       <ProductListing />
     </div>

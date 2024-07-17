@@ -2,6 +2,10 @@ import React, { useState } from "react"
 import './ProductCard.css'
 
 export default function ProductCard(props) {
+function adicionarAoCarrinho(){
+  console.log('finja que eu adicionei ao carrinho, fique feliz')
+}
+
   if (props.imagem) {
     return (
       <div className="caixa-produto">
@@ -22,6 +26,7 @@ export default function ProductCard(props) {
       <p>nome: {props.nome}</p>
       <p>preço: {props.preco}</p>
       <p>preço com desconto: {props.precoComDesconto}</p>
+      <button onClick={adicionarAoCarrinho}>Adicionar ao carrinho</button>
     </div>
   )
 }
