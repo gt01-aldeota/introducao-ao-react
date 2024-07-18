@@ -5,5 +5,30 @@
 .menor{
     width: 100px;
     border: 1px solid red;
+}
 
+.cinza {
+    color: gray;
+}
+
+.verde{
+    color: green;
+}
+
+.vermelho{
+    color: red;
+}
+
+.relativa {
+    position: relative;
+}
+
+.absoluta {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: red;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 10px;
 }

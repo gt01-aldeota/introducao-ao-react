@@ -8,6 +8,8 @@ import React from 'react'
 import ProductCard from "./components/ProductCard";
 import ProductListing from "./components/ProductListing";
 import { ShoppingCart } from 'lucide-react';
+import RenderizacaoCondicional from "./components/RenderizacaoCondicional";
+import RenderizacaoCondicionalAnd from "./components/RenderizacaoCondicionalAnd";
 
 
 function App() {
@@ -80,7 +82,7 @@ function App() {
       {/* <Saudacao /> */}
       {/* <Despedida /> */}
       {/* <Fetch /> */}
-      <div className="relativo">
+      {/* <div className="relativo">
         <div id="carrinho-quantidade" className="absoluta">0</div>
         <div className="carrinho">
         <ShoppingCart />
@@ -92,6 +94,9 @@ function App() {
         <ProductCard nome="produto FODA" />
       </div>
       <p>chuchu2</p>
+      <ProductListing /> */}
+
+      {/* <RenderizacaoCondicionalAnd /> */}
       <ProductListing />
     </div>
   )
