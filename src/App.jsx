@@ -2,17 +2,17 @@ import Saudacao from "./components/Saudacao";
 import Despedida from "./components/Despedida";
 import Fetch from "./components/Fetch";
 import Carrossel from "./components/Carrossel";
-import Header from "./components/Header";
+import Header from "./components/Header"
 import './App.css'
 import React from 'react'
 import ProductCard from "./components/ProductCard";
 import ProductListing from "./components/ProductListing";
+import Chuchu, { ComponenteUm, ComponenteDois, ComponenteTres } from "./components/AllComponents.jsx";
 import { ShoppingCart } from 'lucide-react';
 import RenderizacaoCondicional from "./components/RenderizacaoCondicional";
 import RenderizacaoCondicionalAnd from "./components/RenderizacaoCondicionalAnd";
 
-
-function App() {
+export function App() {
   function funcaoExterna() {
     console.log('funcaoExterna')
     var a = 1
@@ -97,11 +97,12 @@ function App() {
       <ProductListing /> */}
 
       {/* <RenderizacaoCondicionalAnd /> */}
+      <Header />
       <ProductListing />
+      <ComponenteUm />
+      <ComponenteDois />
+      <ComponenteTres />
+      <Chuchu />
     </div>
   )
 }
-
-export default App;
-
-
