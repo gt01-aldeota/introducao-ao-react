@@ -1,67 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ProductCard from "./ProductCard";
 import './ProductListing.css'
 
 export default function ProductListing() {
+    const [listaDeProdutos, setListaDeProdutos] = useState(["1", 2, 3, 4, 5, 6, 7])
+    const [produtoSelecionado, setProdutoSelecionado] = useState()
+
+    useEffect(() => {
+        fetch('https://63e7c552ac3920ad5be36b95.mockapi.io/produto')
+            .then(res => res.json())
+            .then(json => {
+                console.log(json)
+                setListaDeProdutos(json.map(item => item.id))
+            })
+    }, [])
+
+    // foreach
+    // map
+    // filter
+    // find
+
     return (
         <div
             className="lista-produtos"
-            // style={{ display: 'flex' }}
         >
-            <ProductCard 
-                id={1}
-                imagem="https://d2ng48q17pwd8f.cloudfront.net/Custom/Content/Products/10/02/1002762_chuchu-400g-16569_m2_638129314573592802.png" 
-                nome="Tenis1" 
-                preco={30} 
-                precoComDesconto={5} 
-            />
-            <ProductCard 
-                id={2}
-                nome="Tenis1" 
-                preco={30} 
-                precoComDesconto={2} 
-            />
-            <ProductCard 
-                id={3}
-                imagem="https://d2ng48q17pwd8f.cloudfront.net/Custom/Content/Products/10/02/1002762_chuchu-400g-16569_m2_638129314573592802.png" 
-                preco={20}
-            />
-            <ProductCard 
-                id={4}
-                nome="Tenis1" 
-                preco={30} 
-                precoComDesconto={10}    
-            />
-            <ProductCard 
-                id={5}
-                imagem="https://d2ng48q17pwd8f.cloudfront.net/Custom/Content/Products/10/02/1002762_chuchu-400g-16569_m2_638129314573592802.png" 
-                nome="Tenis1" 
-                preco={30} 
-                precoComDesconto={10}
-            />
-            
-            <ProductCard 
-                id={6}
-                nome="Tenis1" 
-                preco={30} 
-                precoComDesconto={10}
-            />
-            
-            <ProductCard 
-                id={7}
-                imagem="https://d2ng48q17pwd8f.cloudfront.net/Custom/Content/Products/10/02/1002762_chuchu-400g-16569_m2_638129314573592802.png"
-                nome="Tenis1"
-                preco={30}
-                precoComDesconto={10}
-            />
-            
-            <ProductCard 
-                id={8}
-                nome="Tenis1"
-                preco={30}
-                precoComDesconto={10}
-            />
-        
+            {/* {listaDeProdutos.map(id=><ProductCard id={id} />)} */}
+
+            {listaDeProdutos.map(id => <button style={{ backgroundColor: 'blue' }} onClick={()=>{setProdutoSelecionado(id)}}>Botao {id} setProdutoSelecionado({id})</button>)}
+        <p>produtoSelecionado:{produtoSelecionado}</p>
+            {produtoSelecionado && <ProductCard id={produtoSelecionado} />}
         </div>
     )
 }
