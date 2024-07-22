@@ -27,7 +27,7 @@ const Header = () => {
                 <a href="#orders">Meus Pedidos</a>
             </nav>
             <div className="user-actions">
-                <a href="#register">Cadastre-se</a>
+                <a href="/register">Cadastre-se</a>
                 <button className="login-btn">Entrar</button>
                 <div className="cart-icon" onClick={() => { setOpen(!open) }}>
                     <FontAwesomeIcon icon={faShoppingCart} />
