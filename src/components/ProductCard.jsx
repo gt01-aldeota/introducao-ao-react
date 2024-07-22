@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import './ProductCard.css'
+import { CarrinhoContext } from "../App";
 
 // props.id
 export default function ProductCard({ id }) {
+  const {carrinho, setCarrinho} = useContext(CarrinhoContext);
+
 var [produto, setProduto] = useState({});
 
   useEffect(() => {
@@ -36,6 +39,7 @@ var [produto, setProduto] = useState({});
       }
       <p>nome: {produto.nome}</p>
       {produto.precoComDesconto ? <p>preço: <span className="cinza">R$<s>{produto.preco}</s></span>  R$ {produto.precoComDesconto}</p> : <p>Preco: R${produto.preco}</p>}
+      <button className="button bg-blue-500" onClick={()=>{setCarrinho([...carrinho, produto.id])}}>Adicionar Produto</button>
     </div>
   )
 }

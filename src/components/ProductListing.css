@@ -8,3 +8,8 @@
     padding-right: 40px;
     flex-wrap: wrap;
 }
+
+.caixa-produtos{
+    display: flex;
+    gap: 20px;
+}

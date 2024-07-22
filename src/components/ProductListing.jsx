@@ -3,32 +3,31 @@ import ProductCard from "./ProductCard";
 import './ProductListing.css'
 
 export default function ProductListing() {
-    const [listaDeProdutos, setListaDeProdutos] = useState(["1", 2, 3, 4, 5, 6, 7])
-    const [produtoSelecionado, setProdutoSelecionado] = useState()
+    const [produtos, setProdutos] = useState([]);
 
     useEffect(() => {
-        fetch('https://63e7c552ac3920ad5be36b95.mockapi.io/produto')
-            .then(res => res.json())
-            .then(json => {
-                console.log(json)
-                setListaDeProdutos(json.map(item => item.id))
-            })
-    }, [])
+        const fetchData = async () => {
+            try {
+                const res = await fetch('https://63e7c552ac3920ad5be36b95.mockapi.io/produto');
+                const json = await res.json();
+                console.log(json);
+                setProdutos(json);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
 
-    // foreach
-    // map
-    // filter
-    // find
+        fetchData();
+    }, []);
 
     return (
-        <div
-            className="lista-produtos"
-        >
-            {/* {listaDeProdutos.map(id=><ProductCard id={id} />)} */}
-
-            {listaDeProdutos.map(id => <button style={{ backgroundColor: 'blue' }} onClick={()=>{setProdutoSelecionado(id)}}>Botao {id} setProdutoSelecionado({id})</button>)}
-        <p>produtoSelecionado:{produtoSelecionado}</p>
-            {produtoSelecionado && <ProductCard id={produtoSelecionado} />}
+        <div>
+            <div className='mb-10 border'>
+                <h1 className="font-bold">Product Listing</h1>
+            </div>
+            <div className="caixa-produtos">
+                {produtos.map(produto => <ProductCard key={produto.id} id={produto.id} />)}
+            </div>
         </div>
     )
 }
