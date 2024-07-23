@@ -26,16 +26,20 @@ export function App() {
   // )
 
   return (
-    <Routes>
-      <Route path="/" element={<CarrinhoContext.Provider value={{ carrinho, setCarrinho }}>
-        <Header />
-        <ProductListing />
-        <ComponenteUm />
-        <ComponenteDois />
-        <ComponenteTres />
-      </CarrinhoContext.Provider>} />
-      <Route path="/chuchu" element={<Chuchu />} />
-      <Route path="/register" element={<Register />} />
-    </Routes>
+    <CarrinhoContext.Provider value={{ carrinho, setCarrinho }}>
+      <Routes>
+        <Route path="/" element={<>
+          <Header />
+          <ProductListing />
+          <ComponenteUm />
+          <ComponenteDois />
+          <ComponenteTres />
+        </>
+        } />
+        <Route path="/chuchu" element={<Chuchu />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/lista-de-produtos" element={<ProductListing />} />
+      </Routes>
+    </CarrinhoContext.Provider>
   )
 }
